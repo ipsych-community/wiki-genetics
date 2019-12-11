@@ -11,3 +11,5 @@ You can clone it locally using either
 - HTTPS: `https://github.com/ipsych-community/wiki-genetics.wiki.git`
 
 - SSH: `git@github.com:ipsych-community/wiki-genetics.wiki.git`
+
+In terminal write ```git clone git@github.com:ipsych-community/wiki-genetics.wiki.git```
