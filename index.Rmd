@@ -1,16 +1,12 @@
 --- 
-# title: "iPSYCH genetics community wiki"
-# subtitle: ""
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
 description: "This is wiki aims at gathering and building knowledge about best practices for genetic analyses, particularly of the iPSYCH data."
-# twitter-handle: ""
 github-repo: "ipsych-community/wiki-genetics"
 url: 'https\://ipsych-community.github.io/wiki-genetics/'
-cover-image: "images/ipsych_big.png"
 favicon: "images/ipsych_small.png"
 ---
 
@@ -22,6 +18,8 @@ knitr::opts_chunk$set()
 WORDS_TO_IGNORE <- c("ShareAlike")
 source("spelling-check.R")
 ```
+
+# (PART) Introduction {-}
 
 # Welcome to the iPSYCH community wiki! {-}
 
@@ -61,6 +59,25 @@ Remember that this is a public space, make sure not to disclose any information 
 - split the issues and pages as much as possible, e.g. making a GWAS using PLINK and making a GWAS using BOLT are two different issues and pages
 
 - for complex analyses (all main ones basically), it would be good to work within teams (of e.g. two people)
+
+## Contributing new pages {-}
+
+At the beginning of each R Markdown file, we should have the following code block to include both chunk options and spelling check.
+
+````markdown
+`r ''````{r setup, include=FALSE}
+# Global {knitr} options
+source("knitr-options.R")
+knitr::opts_chunk$set()
+# Spelling check
+WORDS_TO_IGNORE <- c()
+source("spelling-check.R")
+```
+````
+
+Each new page should go into its own new R Markdown file. The title of this new file should be an header  (`#`) and sections should have header 2 (`##`).
+
+Include the `(PART)` section header only if this new page is the first one of a new part (collection of pages). 
 
 ## License {-}
 
