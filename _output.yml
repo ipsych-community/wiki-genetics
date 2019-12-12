@@ -5,6 +5,6 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./index.html">iPSYCH genetics community wiki</a></li>
+        <li><a href=" https://github.com/ipsych-community/wiki-genetics/issues" target="blank">Open an issue</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
