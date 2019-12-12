@@ -2,14 +2,4 @@
 
 This is wiki aims at gathering and building knowledge about best practices for genetic analyses, particularly of the iPSYCH data.
 
-See the wiki there: https://github.com/ipsych-community/wiki-genetics/wiki
-
-***
-
-You can clone it locally using either
-
-- HTTPS: `https://github.com/ipsych-community/wiki-genetics.wiki.git`
-
-- SSH: `git@github.com:ipsych-community/wiki-genetics.wiki.git`
-
-In terminal write ```git clone git@github.com:ipsych-community/wiki-genetics.wiki.git```
+See the wiki there: https://ipsych-community.github.io/wiki-genetics/
