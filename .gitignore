@@ -4,3 +4,7 @@
 .Ruserdata
 README.html
 wiki-genetics.Rproj
+docs/*.md
+spelling.errors
+_main.rds
+.httr-oauth
