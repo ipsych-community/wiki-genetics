@@ -62,6 +62,8 @@ Remember that this is a public space, make sure not to disclose any information 
 
 ## Contributing new pages {-}
 
+See the [new file example](https://github.com/ipsych-community/wiki-genetics/blob/master/example.Rmd).
+
 At the beginning of each R Markdown file, we should have the following code block to include both chunk options and spelling check.
 
 ````markdown
