@@ -77,8 +77,9 @@ source("spelling-check.R")
 ```
 ````
 
-Each new page should go into its own new R Markdown file. The title of this new file should be an header  (`#`) and sections should have header 2 (`##`).
-
+Each new page should go into its own new R Markdown file.
+You should add this new file to the (ordered) list of files to render in `rmd_files:` in file `_booldown.yml`.
+The title of this new file should be an header  (`#`) and sections should have header 2 (`##`).
 Include the `(PART)` section header only if this new page is the first one of a new part (collection of pages). 
 
 ## License {-}
