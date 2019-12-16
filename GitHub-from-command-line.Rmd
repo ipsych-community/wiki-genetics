@@ -9,9 +9,9 @@ source("spelling-check.R")
 
 # (PART) Local workflow {-}
 
-# How to setup a local Github-git workflow 
+# How to setup a local GitHub-git workflow 
 
-There are many advantages of setting up a local git repository, with the first being the ability to work on your files without the fear of losing internet connection, which could risk all of your most recent changes to be lost.
+There are many advantages of setting up a local Git repository, with the first being the ability to work on your files without the fear of losing internet connection, which could risk all of your most recent changes to be lost.
 
 ## Fork the repository
 
@@ -46,7 +46,7 @@ git merge upstream/master
 
 ## Make a pull request to the original repo
 
-After making changes to the local fork, you would probably want to merge into the original repository. To do that, you first have to push your changes to your own fork on github, and then visit the original repo and click the pull request button. 
+After making changes to the local fork, you would probably want to merge into the original repository. To do that, you first have to push your changes to your own fork on GitHub, and then visit the original repo and click the pull request button. 
 
 ```
 # Add and commit new changes
@@ -61,5 +61,5 @@ git push
 
 ```
 
-If the maintainer things your changes are good they will be accepted and incoroporated into the original code-base. Good luck!
+If the maintainer things your changes are good they will be accepted and incorporated into the original code-base. Good luck!
 

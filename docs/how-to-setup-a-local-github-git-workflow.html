@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/ipsych_small.png" type="image/x-icon" />
+<link rel="prev" href="page-example.html"/>
 
-<link rel="next" href="page-example.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -147,70 +147,60 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!--bookdown:title:end-->
-<!--bookdown:title:start-->
-<div id="welcome-to-the-ipsych-community-wiki" class="section level1 unnumbered">
-<h1>Welcome to the iPSYCH community wiki!</h1>
-<p>This wiki aims at gathering and building knowledge about best practices for genetic analyses, particularly of the iPSYCH data.</p>
-<p>Learn more about iPSYCH there: <a href="https://ipsych.dk/en/" class="uri">https://ipsych.dk/en/</a>.</p>
-<p>Remember that this is a public space, make sure not to disclose any information that would breach ethics approvals of the data.</p>
-<div id="how-to-contribute" class="section level2 unnumbered">
-<h2>How to contribute?</h2>
-<ul>
-<li><p>Small (but useful!) contributions:</p>
-<ul>
-<li><p><strong>opening an issue about some missing/unclear information</strong>; whenever you have to search for some question or someone ask you a question about genetic analyses or/and iPSYCH data, please open an issue here to document that this piece of information is missing to this wiki</p></li>
-<li><p><strong>participating in topic discussions</strong> (in issues), e.g. mentioning missing information, useful references or external links</p></li>
-<li><p><strong>clarifying a point in a wiki page</strong> by adding a few sentences</p></li>
-<li><p><strong>correcting typos</strong></p></li>
-</ul></li>
-<li><p>Larger contributions:</p>
-<ul>
-<li><p><strong>making wiki pages</strong></p></li>
-<li><p><strong>reviewing wiki pages</strong> (including code), by someone who is <em>not</em> expert in the corresponding topic</p></li>
-</ul></li>
-</ul>
+<div id="how-to-setup-a-local-github-git-workflow" class="section level1">
+<h1><span class="header-section-number">2</span> How to setup a local GitHub-git workflow</h1>
+<p>There are many advantages of setting up a local Git repository, with the first being the ability to work on your files without the fear of losing internet connection, which could risk all of your most recent changes to be lost.</p>
+<div id="fork-the-repository" class="section level2">
+<h2><span class="header-section-number">2.1</span> Fork the repository</h2>
+<p>The great thing with forking a repository is the ability to make pull requests, which is an excellent way for people without write permission to contribute code and comments, which can be reviewed and accepted by the maintainers of a certain repository. To fork the <a href="https://github.com/ipsych-community/wiki-genetics" class="uri">https://github.com/ipsych-community/wiki-genetics</a> repository, visit the project page on GitHub and click on the top right icon which says fork.</p>
+<p>Now that you have forked the repository you can clone it like any other repository.</p>
 </div>
-<div id="guidelines" class="section level2 unnumbered">
-<h2>Guidelines</h2>
-<ul>
-<li><p>be nice with others and welcoming to new contributors</p></li>
-<li><p>always open a new issue when you think about missing information (it does <em>not</em> have to be you that add the missing information afterwards)</p></li>
-<li><p>each page should have is own corresponding issue</p></li>
-<li><p>split the issues and pages as much as possible, e.g. making a GWAS using PLINK and making a GWAS using BOLT are two different issues and pages</p></li>
-<li><p>for complex analyses (all main ones basically), it would be good to work within teams (of e.g. two people)</p></li>
-</ul>
+<div id="sync-original-repo" class="section level2">
+<h2><span class="header-section-number">2.2</span> Sync original repo</h2>
+<p>To get the latest changes directly to your local repository, you have to set the original repository as an upstream remote.</p>
+<pre><code># Check registered remotes
+git remote -v
+
+# Add new remote as upstream
+git remote add upstream git@github.com:ipsych-community/wiki-genetics.git
+
+# Check registered remotes
+git remote -v
+
+# Check for changes
+git fetch upstream
+
+# Merge new changes
+git merge upstream/master
+
+# Merge new changes
+git merge upstream/master
+</code></pre>
 </div>
-<div id="contributing-new-pages" class="section level2 unnumbered">
-<h2>Contributing new pages</h2>
-<p>See the <a href="https://github.com/ipsych-community/wiki-genetics/blob/master/example.Rmd">new file example</a>.</p>
-<p>At the beginning of each R Markdown file, we should have the following code block to include both chunk options and spelling check.</p>
-<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">```{r setup, include=FALSE}
-<span class="fu"># Global {knitr} options</span>
-source(&quot;knitr-options.R&quot;)
-knitr::opts_chunk$set()
-<span class="fu"># Spelling check</span>
-WORDS_TO_IGNORE &lt;- c()
-source(&quot;spelling-check.R&quot;)
-```</code></pre></div>
-<p>Each new page should go into its own new R Markdown file. You should add this new file to the (ordered) list of files to render in <code>rmd_files:</code> in file <code>_booldown.yml</code>. The title of this new file should be an header (<code>#</code>) and sections should have header 2 (<code>##</code>). Include the <code>(PART)</code> section header only if this new page is the first one of a new part (collection of pages).</p>
-</div>
-<div id="license" class="section level2 unnumbered">
-<h2>License</h2>
-<p>This material is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 License</a>.</p>
+<div id="make-a-pull-request-to-the-original-repo" class="section level2">
+<h2><span class="header-section-number">2.3</span> Make a pull request to the original repo</h2>
+<p>After making changes to the local fork, you would probably want to merge into the original repository. To do that, you first have to push your changes to your own fork on GitHub, and then visit the original repo and click the pull request button.</p>
+<pre><code># Add and commit new changes
+git add newFile modifiedFile
+git commit -m &quot;changed xx to improve xx&quot;
+
+# Sync forked repo
+git pull
+git push
+
+# now visit original repo on GitHub and make pull request
+</code></pre>
+<p>If the maintainer things your changes are good they will be accepted and incorporated into the original code-base. Good luck!</p>
 
 </div>
 </div>
-
-
-
             </section>
 
           </div>
         </div>
       </div>
+<a href="page-example.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="page-example.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
