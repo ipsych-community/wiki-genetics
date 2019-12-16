@@ -80,7 +80,11 @@ source("spelling-check.R")
 Each new page should go into its own new R Markdown file.
 You should add this new file to the (ordered) list of files to render in `rmd_files:` in file `_booldown.yml`.
 The title of this new file should be an header  (`#`) and sections should have header 2 (`##`).
-Include the `(PART)` section header only if this new page is the first one of a new part (collection of pages). 
+Include the `(PART)` section header only if this new page is the first one of a new part (collection of pages).
+
+To preview your page locally in RStudio, you can use `Ctrl + Shift + K` (like with any Rmd). 
+To build the entire book, which is useful to e.g. rebuild the table of content (ToC), you can use `Ctrl + Shift + B`. 
+**Before rebuilding the entire book**, you should make sure you have the latest changes locally to avoid merge conflicts.
 
 ## License {-}
 
