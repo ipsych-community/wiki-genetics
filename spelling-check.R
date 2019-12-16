@@ -1,3 +1,7 @@
+if (!requireNamespace("spelling", quietly = TRUE))
+  stop("Please install R package {spelling} to enable automatic spelling check.",
+       call. = FALSE)
+
 if (!exists("WORDS_TO_IGNORE")) WORDS_TO_IGNORE <- character(0)
 
 # Spelling check
