@@ -1,0 +1,65 @@
+```{r setup, include=FALSE}
+# Global {knitr} options
+source("knitr-options.R")
+knitr::opts_chunk$set()
+# Spelling check
+WORDS_TO_IGNORE <- c("ShareAlike")
+source("spelling-check.R")
+```
+
+# (PART) Local workflow {-}
+
+# How to setup a local GitHub-git workflow 
+
+There are many advantages of setting up a local Git repository, with the first being the ability to work on your files without the fear of losing internet connection, which could risk all of your most recent changes to be lost.
+
+## Fork the repository
+
+The great thing with forking a repository is the ability to make pull requests, which is an excellent way for people without write permission to contribute code and comments, which can be reviewed and accepted by the maintainers of a certain repository. To fork the https://github.com/ipsych-community/wiki-genetics repository, visit the project page on GitHub and click on the top right icon which says fork.
+
+Now that you have forked the repository you can clone it like any other repository. 
+
+## Sync original repo 
+
+To get the latest changes directly to your local repository, you have to set the original repository as an upstream remote. 
+
+```
+# Check registered remotes
+git remote -v
+
+# Add new remote as upstream
+git remote add upstream git@github.com:ipsych-community/wiki-genetics.git
+
+# Check registered remotes
+git remote -v
+
+# Check for changes
+git fetch upstream
+
+# Merge new changes
+git merge upstream/master
+
+# Merge new changes
+git merge upstream/master
+
+```
+
+## Make a pull request to the original repo
+
+After making changes to the local fork, you would probably want to merge into the original repository. To do that, you first have to push your changes to your own fork on GitHub, and then visit the original repo and click the pull request button. 
+
+```
+# Add and commit new changes
+git add newFile modifiedFile
+git commit -m "changed xx to improve xx"
+
+# Sync forked repo
+git pull
+git push
+
+# now visit original repo on GitHub and make pull request
+
+```
+
+If the maintainer things your changes are good they will be accepted and incorporated into the original code-base. Good luck!
+

@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/ipsych_small.png" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="how-to-setup-a-local-github-git-workflow.html"/>
+<link rel="prev" href="page-example.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -147,21 +147,60 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-example" class="section level1">
-<h1><span class="header-section-number">1</span> Page example</h1>
-<p>See section <a href="index.html#contributing-new-pages">Contributing new pages</a>.</p>
+<div id="how-to-setup-a-local-github-git-workflow" class="section level1">
+<h1><span class="header-section-number">2</span> How to setup a local GitHub-git workflow</h1>
+<p>There are many advantages of setting up a local Git repository, with the first being the ability to work on your files without the fear of losing internet connection, which could risk all of your most recent changes to be lost.</p>
+<div id="fork-the-repository" class="section level2">
+<h2><span class="header-section-number">2.1</span> Fork the repository</h2>
+<p>The great thing with forking a repository is the ability to make pull requests, which is an excellent way for people without write permission to contribute code and comments, which can be reviewed and accepted by the maintainers of a certain repository. To fork the <a href="https://github.com/ipsych-community/wiki-genetics" class="uri">https://github.com/ipsych-community/wiki-genetics</a> repository, visit the project page on GitHub and click on the top right icon which says fork.</p>
+<p>Now that you have forked the repository you can clone it like any other repository.</p>
+</div>
+<div id="sync-original-repo" class="section level2">
+<h2><span class="header-section-number">2.2</span> Sync original repo</h2>
+<p>To get the latest changes directly to your local repository, you have to set the original repository as an upstream remote.</p>
+<pre><code># Check registered remotes
+git remote -v
+
+# Add new remote as upstream
+git remote add upstream git@github.com:ipsych-community/wiki-genetics.git
+
+# Check registered remotes
+git remote -v
+
+# Check for changes
+git fetch upstream
+
+# Merge new changes
+git merge upstream/master
+
+# Merge new changes
+git merge upstream/master
+</code></pre>
+</div>
+<div id="make-a-pull-request-to-the-original-repo" class="section level2">
+<h2><span class="header-section-number">2.3</span> Make a pull request to the original repo</h2>
+<p>After making changes to the local fork, you would probably want to merge into the original repository. To do that, you first have to push your changes to your own fork on GitHub, and then visit the original repo and click the pull request button.</p>
+<pre><code># Add and commit new changes
+git add newFile modifiedFile
+git commit -m &quot;changed xx to improve xx&quot;
+
+# Sync forked repo
+git pull
+git push
+
+# now visit original repo on GitHub and make pull request
+</code></pre>
+<p>If the maintainer things your changes are good they will be accepted and incorporated into the original code-base. Good luck!</p>
 
 </div>
-
-
-
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="how-to-setup-a-local-github-git-workflow.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="page-example.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
