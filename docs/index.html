@@ -185,15 +185,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2>Contributing new pages</h2>
 <p>See the <a href="https://github.com/ipsych-community/wiki-genetics/blob/master/example.Rmd">new file example</a>.</p>
 <p>At the beginning of each R Markdown file, we should have the following code block to include both chunk options and spelling check.</p>
-<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">```{r setup, include=FALSE}
-<span class="fu"># Global {knitr} options</span>
-source(&quot;knitr-options.R&quot;)
-knitr::opts_chunk$set()
-<span class="fu"># Spelling check</span>
-WORDS_TO_IGNORE &lt;- c()
-source(&quot;spelling-check.R&quot;)
-```</code></pre></div>
-<p>Each new page should go into its own new R Markdown file. You should add this new file to the (ordered) list of files to render in <code>rmd_files:</code> in file <code>_booldown.yml</code>. The title of this new file should be an header (<code>#</code>) and sections should have header 2 (<code>##</code>). Include the <code>(PART)</code> section header only if this new page is the first one of a new part (collection of pages).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb1-1" title="1"><span class="bn">```{r setup, include=FALSE}</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="bn"># Global {knitr} options</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="bn">source(&quot;knitr-options.R&quot;)</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="bn">knitr::opts_chunk$set()</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="bn"># Spelling check</span></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="bn">WORDS_TO_IGNORE &lt;- c()</span></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="bn">source(&quot;spelling-check.R&quot;)</span></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="bn">```</span></a></code></pre></div>
+<p>Each new page should go into its own new R Markdown file.
+You should add this new file to the (ordered) list of files to render in <code>rmd_files:</code> in file <code>_booldown.yml</code>.
+The title of this new file should be an header (<code>#</code>) and sections should have header 2 (<code>##</code>).
+Include the <code>(PART)</code> section header only if this new page is the first one of a new part (collection of pages).</p>
+<p>To preview your page locally in RStudio, you can use <code>Ctrl + Shift + K</code> (equivalent to running <code>bookdown::render_book("example.Rmd", encoding = 'UTF-8')</code>, where <code>example.Rmd</code> is the page you want to render).
+To build the entire book, which is useful to e.g. rebuild the table of content (ToC) for all pages, you can use <code>Ctrl + Shift + B</code> (equivalent to running <code>rmarkdown::render_site(encoding = 'UTF-8')</code>).
+<strong>Before rebuilding the entire book</strong>, you should make sure you have the latest changes locally to avoid merge conflicts.</p>
 </div>
 <div id="license" class="section level2 unnumbered">
 <h2>License</h2>

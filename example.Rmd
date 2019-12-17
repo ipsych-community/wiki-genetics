@@ -3,7 +3,7 @@
 source("knitr-options.R")
 knitr::opts_chunk$set()
 # Spelling check
-WORDS_TO_IGNORE <- c("ShareAlike")
+WORDS_TO_IGNORE <- c()
 source("spelling-check.R")
 ```
 
