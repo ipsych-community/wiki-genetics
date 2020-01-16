@@ -1,4 +1,10 @@
-rmd_files: ["index.Rmd", "gen-corr.Rmd", "example.Rmd", "GitHub-from-command-line.Rmd"]
+rmd_files: [
+  "index.Rmd",
+  "gen-corr-ldsc.Rmd",
+  "gen-corr-sumher.Rmd",
+  "example.Rmd",
+  "GitHub-from-command-line.Rmd"
+]
 output_dir: docs
 new_session: yes
 language:

@@ -7,7 +7,9 @@ WORDS_TO_IGNORE <- c()
 source("spelling-check.R")
 ```
 
-# (PART) Heritability & genetic correlation {-}
-
 # Computing genetic correlations with SumHer
+
+The key difference between SumHer and the existing software LD Score Regression (LDSC) is that SumHer allows the user to specify the heritability model [@speed2019sumher].
+
+[TODO]
 

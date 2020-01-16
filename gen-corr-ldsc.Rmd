@@ -1,0 +1,14 @@
+```{r setup, include=FALSE}
+# Global {knitr} options
+source("knitr-options.R")
+knitr::opts_chunk$set()
+# Spelling check
+WORDS_TO_IGNORE <- c()
+source("spelling-check.R")
+```
+
+# (PART) Heritability & genetic correlation {-}
+
+# Computing genetic correlations with LD score regression
+
+
