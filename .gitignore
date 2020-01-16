@@ -9,3 +9,4 @@ spelling.errors
 _main.rds
 .httr-oauth
 tmp-data/
+render*.rds
